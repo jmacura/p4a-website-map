@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>P4A web - HS Layers</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+</head>
+<body>
+    <div style="height:30em; width: 100%">
+        <div id="hs-app" hs ng-app="hs" ng-controller="Main" style="position: relative; width: 100%; height: 100%; padding: 0; border: 0; margin: 0;"> </div>
+    </div>
+
+<script>
+    function styleFunction(feature, number) {
+      console.log(feature.get('Name'));
+      if(feature.get('Name')) {
+        return new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(255, 128, 123, 0.2)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#e49905',
+          width: 2
+        }),
+        image: new ol.style.Circle({
+          fill: new ol.style.Fill({
+            color: 'rgba(255, 128, 123, 0.2)'
+          }),
+          stroke: new ol.style.Stroke({
+            color: '#e49905',
+            width: 2
+          }),
+          radius: 5
+        }),
+      });
+      } else {
+        return new ol.style.Style({
+        fill: new ol.style.Fill({
+          color: 'rgba(255, 0, 0, 0.2)'
+        }),
+        stroke: new ol.style.Stroke({
+          color: '#e41905',
+          width: 2
+        }),
+        image: new ol.style.Circle({
+          fill: new ol.style.Fill({
+            color: 'rgba(255, 0, 0, 0.2)'
+          }),
+          stroke: new ol.style.Stroke({
+            color: '#e41905',
+            width: 2
+          }),
+          radius: 5
+        }),
+      });
+      }
+    }
+    function getLRUser() {
+      return (0);
+    }
+    function hslayersNgConfig(ol) {
+      return {
+        sizeMode: "container",
+        sidebarClosed: true,
+        useIsolatedBootstrap: true,
+        useProxy: true,
+        //proxyPrefix: "/proxy/",
+        panelsEnabled: {
+            composition_browser: false,
+            toolbar: false,
+            mobile_settings: true,
+            draw: false,
+            datasource_selector: false,
+            layermanager: false,
+            print: true,
+            saveMap: false,
+            language: false,
+            permalink: false,
+            feature_crossfilter: false,
+            compositionLoadingProgress: false
+        },
+        default_layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM({
+              url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
+            }),
+            title: "Wikimedia Map",
+            base: true,
+            visible: true,
+            removable: false
+          }),
+          new ol.layer.Vector({
+            title: "Partners",
+            style: styleFunction,
+            hoveredKeys: ['Name', 'description'],
+            hoveredKeysTranslations: {'Name': 'Name', 'description': 'Description'},
+            source: new ol.source.Vector({
+              format: new ol.format.GeoJSON(),
+              url: "./data/Plan4All_Members.geojson" //"https://raw.githubusercontent.com/jmacura/testing/master/partners-dummy.geojson"
+            }),
+            cluster: true
+          })
+        ],
+        default_view: new ol.View({
+          center: ol.proj.transform([17.474129, 52.574000], 'EPSG:4326', 'EPSG:3857'),
+          zoom: 4,
+          units: "m"
+        }),
+        locationButtonVisible: false
+      }
+    }
+</script>
+<script src="./lib/hslayers-ng.js"></script> <!-- https://publish.lesprojekt.cz/vhs/dist/hslayers-ng.js -->
+
+</body>
+</html>

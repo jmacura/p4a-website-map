@@ -64,57 +64,74 @@
     }
     function hslayersNgConfig(ol) {
       return {
-        sizeMode: "container",
+        sizeMode: 'container',
         sidebarClosed: true,
         useIsolatedBootstrap: true,
         useProxy: true,
         //proxyPrefix: "/proxy/",
+        componentsEnabled: {
+          sidebar: false,
+          toolbar: false,
+          geolocationButton: false,
+        },
         panelsEnabled: {
-            composition_browser: false,
-            toolbar: false,
-            mobile_settings: true,
-            draw: false,
-            datasource_selector: false,
-            layermanager: false,
-            print: true,
-            saveMap: false,
-            language: false,
-            permalink: false,
-            feature_crossfilter: false,
-            compositionLoadingProgress: false
+          composition_browser: false,
+          toolbar: false,
+          mobile_settings: true,
+          draw: false,
+          datasource_selector: false,
+          layermanager: false,
+          print: true,
+          saveMap: false,
+          language: false,
+          permalink: false,
+          feature_crossfilter: false,
+          compositionLoadingProgress: false
         },
         default_layers: [
           new ol.layer.Tile({
             source: new ol.source.OSM({
               url: 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
             }),
-            title: "Wikimedia Map",
+            title: 'Wikimedia Map',
             base: true,
             visible: true,
             removable: false
           }),
           new ol.layer.Vector({
-            title: "Partners",
+            title: 'Partners',
             style: styleFunction,
-            hoveredKeys: ['Name', 'description'],
-            hoveredKeysTranslations: {'Name': 'Name', 'description': 'Description'},
+            popUp: {
+              display: 'hover',
+              attributes: [
+                {
+                  attribute: 'logo', displayFunction: x => {
+                    return '<img src=\"https://www.plan4all.eu/wp-content/uploads/' + x + '\" width=\"100rem\" >';
+                  }
+                },
+                {
+                  attribute: 'website', label: 'web', displayFunction: x => {
+                    return '<a href=\"' + x + '\" target=\"_blank">' + x + '</a>';
+                  }
+                }
+              ]
+            },
             source: new ol.source.Vector({
               format: new ol.format.GeoJSON(),
-              url: "./data/Plan4All_Members.geojson" //"https://raw.githubusercontent.com/jmacura/testing/master/partners-dummy.geojson"
+              url: 'https://raw.githubusercontent.com/jmacura/p4a-website-map/master/data/Plan4All_Members.geojson'//'./data/Plan4All_Members.geojson'
             }),
-            cluster: true
+            //cluster: true
           })
         ],
         default_view: new ol.View({
           center: ol.proj.transform([17.474129, 52.574000], 'EPSG:4326', 'EPSG:3857'),
           zoom: 4,
-          units: "m"
-        }),
-        locationButtonVisible: false
+          units: 'm'
+        })
       }
     }
 </script>
-<script src="./lib/hslayers-ng.js"></script> <!-- https://publish.lesprojekt.cz/vhs/dist/hslayers-ng.js -->
+<script src='./lib/hslayers-ng.js'></script> <!-- https://unpkg.com/hslayers-ng@1.17.5/dist/hslayers-ng.js -->
 
 </body>
 </html>

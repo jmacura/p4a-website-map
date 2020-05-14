@@ -11,7 +11,8 @@
       "properties": {
         "name": "University of West Bohemia",
         "logo": "2020/05/kgm-zcu.jpg",
-        "website": "https://kgm.zcu.cz"
+        "website": "https://kgm.zcu.cz",
+        "isFounder": "yes"
       },
       "geometry": { "type": "Point", "coordinates": [13.3519468, 49.7266047] }
     },
@@ -20,7 +21,8 @@
       "properties": {
         "name": "HELP SERVICE – REMOTE SENSING s.r.o.",
         "logo": "",
-        "website": "http://www.bnhelp.cz/"
+        "website": "http://www.bnhelp.cz/",
+        "isFounder": "yes"
       },
       "geometry": { "type": "Point", "coordinates": [14.6870478, 49.781285] }
     },
@@ -29,7 +31,8 @@
       "properties": {
         "name": "Czech Centre for Science and Society",
         "logo": "2020/05/ccss.png",
-        "website": "http://www.ccss.cz"
+        "website": "http://www.ccss.cz",
+        "isFounder": "yes"
       },
       "geometry": { "type": "Point", "coordinates": [14.4017795, 50.0681129] }
     },

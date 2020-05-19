@@ -20,7 +20,7 @@
       "type": "Feature",
       "properties": {
         "name": "HELP SERVICE – REMOTE SENSING s.r.o.",
-        "logo": "",
+        "logo": "2020/05/hs-rs.png",
         "website": "http://www.bnhelp.cz/",
         "isFounder": "yes"
       },
@@ -193,7 +193,7 @@
       "type": "Feature",
       "properties": {
         "name": "Ukrainian Land and Resource Management Center",
-        "logo": "",
+        "logo": "2020/05/UkrainianLandAndResourceManagement.png",
         "website": "http://www.ulrmc.org.ua/"
       },
       "geometry": { "type": "Point", "coordinates": [30.4559234, 50.429611] }
@@ -229,7 +229,7 @@
       "type": "Feature",
       "properties": {
         "name": "Institute of Spatial Planning",
-        "logo": "",
+        "logo": "2020/05/AMMK-KEPA.jpg",
         "website": "http://www.ammk-rks.net/?page=1,94"
       },
       "geometry": { "type": "Point", "coordinates": [21.1558573, 42.6596113] }
@@ -295,7 +295,7 @@
       "type": "Feature",
       "properties": {
         "name": "Geospatial Research and Education Lab",
-        "logo": "",
+        "logo": "2020/05/GREL.jpg",
         "website": "http://grel.ist.edu.pk/"
       },
       "geometry": {
@@ -343,7 +343,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mahatma Education Society",
-        "logo": "",
+        "logo": "2020/05/MahatmaEducationSociety.png",
         "website": "https://uxo.mes.ac.in/"
       },
       "geometry": { "type": "Point", "coordinates": [72.8936833, 19.0535972] }
@@ -397,7 +397,7 @@
       "type": "Feature",
       "properties": {
         "name": "Institute of Geoinformation & Earth Observation, PMAS Arid Agriculture University",
-        "logo": "",
+        "logo": "rawalpindi.png",
         "website": "http://www.uaar.edu.pk/igeo/index.php?dept_id=50"
       },
       "geometry": { "type": "Point", "coordinates": [73.0815435, 33.6491528] }
@@ -406,7 +406,7 @@
       "type": "Feature",
       "properties": {
         "name": "University of Novi Sad, Faculty of technical Science, Geoinformatics Laboratory",
-        "logo": "",
+        "logo": "2020/05/GeoinformatikaNoviSad.jpg",
         "website": "http://geoinformatika.uns.ac.rs/"
       },
       "geometry": { "type": "Point", "coordinates": [19.8516968, 45.2461012] }
@@ -415,7 +415,7 @@
       "type": "Feature",
       "properties": {
         "name": "Metcenas, O.p.s.",
-        "logo": "",
+        "logo": "2020/05/metcenas.png",
         "website": "https://www.metcenas.cz/"
       },
       "geometry": { "type": "Point", "coordinates": [13.3545957, 49.7690318] }
@@ -472,7 +472,7 @@
       "type": "Feature",
       "properties": {
         "name": "Crehan, Kusano and Associates SPRL",
-        "logo": "",
+        "logo": "2020/05/CKA.png",
         "website": "http://www.cka.be/index.html"
       },
       "geometry": { "type": "Point", "coordinates": [4.3671101, 50.8334426] }

@@ -15,46 +15,32 @@
     </div>
 
 <script>
-    function styleFunction(feature, number) {
-      console.log(feature.get('Name'));
-      if(feature.get('Name')) {
+    function styleFunction(feature, resolution) {
+      //console.log(feature.get('isFounder'));
+      if(feature.get('isFounder') && feature.get('isFounder') === 'yes') { // je zakladajici clen
         return new ol.style.Style({
-        fill: new ol.style.Fill({
-          color: 'rgba(255, 128, 123, 0.2)'
-        }),
-        stroke: new ol.style.Stroke({
-          color: '#e49905',
-          width: 2
-        }),
         image: new ol.style.Circle({
           fill: new ol.style.Fill({
-            color: 'rgba(255, 128, 123, 0.2)'
+            color: 'rgba(128, 255, 128, 0.2)'
+          }),
+          stroke: new ol.style.Stroke({
+            color: '#77e405',
+            width: 4
+          }),
+          radius: 6
+        }),
+      });
+      } else { //neni zakladajici clen
+        return new ol.style.Style({
+        image: new ol.style.Circle({
+          fill: new ol.style.Fill({
+            color: 'rgba(255, 128, 128, 0.2)'
           }),
           stroke: new ol.style.Stroke({
             color: '#e49905',
-            width: 2
+            width: 4
           }),
-          radius: 5
-        }),
-      });
-      } else {
-        return new ol.style.Style({
-        fill: new ol.style.Fill({
-          color: 'rgba(255, 0, 0, 0.2)'
-        }),
-        stroke: new ol.style.Stroke({
-          color: '#e41905',
-          width: 2
-        }),
-        image: new ol.style.Circle({
-          fill: new ol.style.Fill({
-            color: 'rgba(255, 0, 0, 0.2)'
-          }),
-          stroke: new ol.style.Stroke({
-            color: '#e41905',
-            width: 2
-          }),
-          radius: 5
+          radius: 6
         }),
       });
       }

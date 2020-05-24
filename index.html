@@ -16,33 +16,38 @@
 
 <script>
     function styleFunction(feature, resolution) {
-      //console.log(feature.get('isFounder'));
-      if(feature.get('isFounder') && feature.get('isFounder') === 'yes') { // je zakladajici clen
+      if (
+        feature &&
+        feature.get('isFounder') &&
+        feature.get('isFounder') === 'yes'
+      ) {
+        // Green circle for founding members
         return new ol.style.Style({
-        image: new ol.style.Circle({
-          fill: new ol.style.Fill({
-            color: 'rgba(128, 255, 128, 0.2)'
+          image: new ol.style.Circle({
+            fill: new ol.style.Fill({
+              color: 'rgba(128, 255, 128, 0.2)',
+            }),
+            stroke: new ol.style.Stroke({
+              color: '#77e405',
+              width: 4,
+            }),
+            radius: 6,
           }),
-          stroke: new ol.style.Stroke({
-            color: '#77e405',
-            width: 4
-          }),
-          radius: 6
-        }),
-      });
-      } else { //neni zakladajici clen
+        });
+      } else {
+        // Orange circle for regular members
         return new ol.style.Style({
-        image: new ol.style.Circle({
-          fill: new ol.style.Fill({
-            color: 'rgba(255, 128, 128, 0.2)'
+          image: new ol.style.Circle({
+            fill: new ol.style.Fill({
+              color: 'rgba(255, 128, 128, 0.2)',
+            }),
+            stroke: new ol.style.Stroke({
+              color: '#e49905',
+              width: 4,
+            }),
+            radius: 6,
           }),
-          stroke: new ol.style.Stroke({
-            color: '#e49905',
-            width: 4
-          }),
-          radius: 6
-        }),
-      });
+        });
       }
     }
     function getLRUser() {
@@ -55,6 +60,7 @@
         useIsolatedBootstrap: true,
         useProxy: true,
         //proxyPrefix: "/proxy/",
+        popUpDisplay: 'click',
         componentsEnabled: {
           sidebar: false,
           toolbar: false,
@@ -74,16 +80,15 @@
             title: 'Partners',
             style: styleFunction,
             popUp: {
-              display: 'hover',
               attributes: [
                 {
-                  attribute: 'logo', displayFunction: x => {
-                    return '<img src=\"https://www.plan4all.eu/wp-content/uploads/' + x + '\" width=\"100rem\" >';
+                  attribute: 'logo', displayFunction: (x) => {
+                    return '<img src="https://www.plan4all.eu/wp-content/uploads/' + x + '" width="100rem" >';
                   }
                 },
                 {
-                  attribute: 'website', label: 'web', displayFunction: x => {
-                    return '<a href=\"' + x + '\" target=\"_blank">' + x + '</a>';
+                  attribute: 'website', label: 'web', displayFunction: (x) => {
+                    return '<a href="' + x + '" target="_blank">' + x + '</a>';
                   }
                 }
               ]
@@ -92,14 +97,15 @@
               format: new ol.format.GeoJSON(),
               url: 'https://raw.githubusercontent.com/jmacura/p4a-website-map/master/data/Plan4All_Members.geojson'//'./data/Plan4All_Members.geojson'
             }),
-            //cluster: true
+            cluster: true
           })
         ],
         default_view: new ol.View({
           center: ol.proj.transform([17.474129, 52.574000], 'EPSG:4326', 'EPSG:3857'),
           zoom: 4,
           units: 'm'
-        })
+        }),
+        queryPoint: 'hidden'
       }
     }
 </script>

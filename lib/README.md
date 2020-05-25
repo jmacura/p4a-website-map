@@ -1,0 +1,1 @@
+No longer used. Libraries are loaded from [UNPKG](https://unpkg.com/hslayers-ng@1.23.0/) CDN instead.

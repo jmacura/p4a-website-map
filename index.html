@@ -14,7 +14,7 @@
   </div>
 
 <script>
-    window.HSL_PATH = 'https://unpkg.com/hslayers-ng@1.23.0/dist/';
+    window.HSL_PATH = 'https://unpkg.com/hslayers-ng@1.24.3/dist/';
     function getLRUser() {
       return (0);
     }
@@ -97,6 +97,9 @@
                 }
               ]
             },
+            editor: {
+              editable: false,
+            },
             source: new ol.source.Vector({
               format: new ol.format.GeoJSON(),
               url: 'https://raw.githubusercontent.com/jmacura/p4a-website-map/master/data/Plan4All_Members.geojson'//'./data/Plan4All_Members.geojson'
@@ -113,7 +116,7 @@
       }
     }
 </script>
-<script src='https://unpkg.com/hslayers-ng@1.23.0/dist/hslayers-ng.main.js'></script> <!-- ./lib/hslayers-ng.main.js -->
+<script src='https://unpkg.com/hslayers-ng@1.24.3/dist/hslayers-ng.main.js'></script> <!-- ./lib/hslayers-ng.main.js -->
 
 </body>
 </html>

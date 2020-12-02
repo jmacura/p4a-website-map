@@ -210,9 +210,9 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Department of Land Surveying and Geomatics",
+        "name": "Department of Geoinformation and Cartography",
         "logo": "",
-        "website": "http://kgsz.mapa.net.pl/"
+        "website": "http://www.uwm.edu.pl/"
       },
       "geometry": { "type": "Point", "coordinates": [19.145136, 51.919438] }
     },

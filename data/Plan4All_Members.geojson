@@ -219,15 +219,6 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cen Group Ltd",
-        "logo": "2020/05/CenGlobal.jpg",
-        "website": "http://www.cenglobal.com/"
-      },
-      "geometry": { "type": "Point", "coordinates": [-1.8942602, 52.525076] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Institute of Spatial Planning",
         "logo": "2020/05/AMMK-KEPA.jpg",
         "website": "http://www.ammk-rks.net/?page=1,94"

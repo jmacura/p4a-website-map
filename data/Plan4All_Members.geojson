@@ -599,6 +599,36 @@
         "membership": "full"
       },
       "geometry": { "type": "Point", "coordinates": [13.8087564, 46.572914] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RTWin",
+        "logo": "2022/10/RoadTwin.png",
+        "website": "https://roadtwin.com/",
+        "membership": "associated"
+      },
+      "geometry": { "type": "Point", "coordinates": [13.381615, 49.736768] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "W2L",
+        "logo": "2022/10/Web2Learn.png",
+        "website": "https://web2learn.eu/",
+        "membership": "associated"
+      },
+      "geometry": { "type": "Point", "coordinates": [22.943330, 40.633657] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Socialinnolabs",
+        "logo": "2022/10/SocialInnolabs.png",
+        "website": "https://socialinnolabs.org/en",
+        "membership": "associated"
+      },
+      "geometry": { "type": "Point", "coordinates": [-3.692160, 40.428700] }
     }
   ]
 }

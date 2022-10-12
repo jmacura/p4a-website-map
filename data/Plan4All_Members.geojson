@@ -603,7 +603,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "RTWin",
+        "name": "RoadTwin",
         "logo": "2022/10/RoadTwin.png",
         "website": "https://roadtwin.com/",
         "membership": "associated"

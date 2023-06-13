@@ -629,6 +629,15 @@
         "membership": "associated"
       },
       "geometry": { "type": "Point", "coordinates": [-3.692160, 40.428700] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Global Skills Network OÜ",
+        "website": "https://www.globalskillsnetwork.com/",
+        "membership": "associated"
+      },
+      "geometry": { "type": "Point", "coordinates": [24.7750619, 59.4291653] }
     }
   ]
 }

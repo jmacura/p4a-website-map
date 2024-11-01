@@ -639,6 +639,16 @@
         "membership": "associated"
       },
       "geometry": { "type": "Point", "coordinates": [24.7750619, 59.4291653] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kyarumba Tree Farmers Savings and Credits Cooperation (KBT)",
+        "logo": "2024/11/KBTFarmers.png",
+        "website": "http://kbtfarmers.org/",
+        "membership": "associated"
+      },
+      "geometry": { "type": "Point", "coordinates": [29.9522122, 0.1221675] }
     }
   ]
 }
